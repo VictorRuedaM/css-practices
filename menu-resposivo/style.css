@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #292929;
+  color: #fff;
+  width: 100%;
+}
+
+/* menu mobile */
+nav .mobile {
+  display: none;
+}
+
+nav .mobile .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.collapsed {
+  display: none;
+}
+
+
+nav .mobile .header .more button {
+  border: none;
+  background-color: #292929;
+  color: tomato;
+  padding: 15px;
+  cursor: pointer;
+}
+
+nav .logo {
+  min-width: 250px;
+  padding-left: 20px;
+}
+
+nav a {
+  color: tomato;
+  text-decoration: none;
+  display: block;
+  padding: 20px 25px;
+
+}
+
+nav a:hover {
+  color: black;
+  background-color: tomato;
+  cursor: pointer;
+}
+
+/* menu desktop */
+
+nav .desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0;
+}
+
+nav .desktop .primary,
+nav .desktop .secondary{
+  display: flex;
+}
+
+nav .desktop .secondary.mini {
+  display: none;
+}
+
+
+@media screen and (max-width: 900px){
+  nav .logo {
+    min-width: 100px;
+  }
+
+  nav .secondary.full {
+    display: none;
+  }
+
+  nav .secondary.mini {
+    display: block !important;
+  }
+
+  nav .secondary.mini .submenu {
+    background-color: #292929;
+    position: absolute;
+    display: none;
+    width: 200px;
+    right: 0;
+  }
+
+  nav .secondary.mini:hover .submenu {
+    display: block;
+  }
+
+  @media screen and (max-width: 500px) {
+    nav .desktop {
+      display: none;
+    }
+
+    nav .mobile {
+      display: block;
+    }
+
+    nav .logo {
+      padding-left: 0;
+    }
+  }
+}
